@@ -78,5 +78,6 @@ public class AppService {
 		// TODO Auto-generated method stub
 		return appRepo.findAllByNumber(phoneNumber);
 	}
+	System.out.println("Hello)"
 
 }
