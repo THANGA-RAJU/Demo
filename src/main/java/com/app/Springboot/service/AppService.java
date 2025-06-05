@@ -79,4 +79,6 @@ public class AppService {
 		return appRepo.findAllByNumber(phoneNumber);
 	}
 
+System.out.println("demo");
+
 }
