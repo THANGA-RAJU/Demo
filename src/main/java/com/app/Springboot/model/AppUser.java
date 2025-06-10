@@ -12,7 +12,7 @@ import jakarta.persistence.OneToOne;
 public class AppUser {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	private String name;
 	@Column(unique = true,nullable = true)

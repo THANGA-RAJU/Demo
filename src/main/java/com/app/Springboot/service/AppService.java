@@ -24,7 +24,7 @@ public class AppService {
 		return appRepo.findAll();
 	}
 
-	public List<AppUser> saveUsers(UserRequest user) {
+	public AppUser saveUsers(UserRequest user) {
 		
 		if(appRepo.existsByEmail(user.getEmail())){
 			throw new EmailAlreadyExistsException("this Email already existed "+user.getEmail(),HttpStatus.BAD_REQUEST.value());
@@ -42,7 +42,7 @@ public class AppService {
 		savedUser.setRole(savedRole);
 		
 		
-	        return (List<AppUser>) appRepo.save(savedUser);
+	        return appRepo.save(savedUser);
 	}
 
 
@@ -78,6 +78,5 @@ public class AppService {
 		// TODO Auto-generated method stub
 		return appRepo.findAllByNumber(phoneNumber);
 	}
-	System.out.println("Hello)"
 
 }

@@ -3,6 +3,8 @@ package com.app.Springboot.controller;
 import java.util.List;
 import java.util.Optional;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -24,24 +26,30 @@ import com.app.Springboot.service.AppService;
 @RequestMapping("/api")
 public class Appcontroller {
 	
+//    private final Logger logger = LoggerFactory.getLogger( Appcontroller.class );
+
+	
 	@Autowired
 	AppService appService;
 	
 	@GetMapping("/get")
 	public ResponseEntity<List<AppUser>> getAllUsers() {
+//		logger.info("info message");
+//		logger.error("Error message");
 		List<AppUser> users=appService.getAllUsers();
 		return ResponseEntity.ok(users);
 		
 	}
 	
 	@PostMapping("/save")
-	public ResponseEntity<List<AppUser>> saveUser(@RequestBody UserRequest user){
-        List<AppUser> save=appService.saveUsers(user);
+	public ResponseEntity<AppUser> saveUser(@RequestBody UserRequest user){
+        AppUser save=appService.saveUsers(user);
 		return ResponseEntity.ok(save);
 	}
 	
 	@PutMapping
 	public ResponseEntity<AppUser> saveUser(@PathVariable Long id,@RequestBody UserRequest user) {
+		
 		AppUser save=appService.updateUser(id,user);
 		return ResponseEntity.ok(save);
 	}
