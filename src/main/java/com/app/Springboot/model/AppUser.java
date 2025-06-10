@@ -24,7 +24,7 @@ public class AppUser {
 	public Long getId() {
 		return id;
 	}
-	public  setId(Long id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 	public String getName() {
@@ -33,7 +33,7 @@ public class AppUser {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getNumber() {
+	public  getNumber() {
 		return number;
 	}
 	public void setNumber(String number) {
