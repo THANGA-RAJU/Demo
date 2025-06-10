@@ -40,7 +40,6 @@ public class AppService {
 		Roles savedRole= new Roles();
 		savedRole.setRoleName(ConstantRole.fromString(user.getRole()));
 		savedUser.setRole(savedRole);
-		System.out.println("Hello");
 		
 	        return appRepo.save(savedUser);
 	}
