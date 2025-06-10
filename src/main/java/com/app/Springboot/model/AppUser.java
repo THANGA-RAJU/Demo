@@ -33,7 +33,7 @@ public class AppUser {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public  getNumber() {
+	public String getNumber() {
 		return number;
 	}
 	public void setNumber(String number) {
