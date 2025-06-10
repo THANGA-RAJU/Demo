@@ -22,7 +22,6 @@ public class AppService {
 	
 	public List<AppUser> getAllUsers() {
 		
-		System.out.println("Get all the records");
 		return appRepo.findAll();
 	}
 
