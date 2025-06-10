@@ -21,7 +21,6 @@ public class AppService {
 	AppRepo appRepo;
 	
 	public List<AppUser> getAllUsers() {
-		System.out.println("updated");
 		return appRepo.findAll();
 	}
 
