@@ -40,7 +40,7 @@ public class AppService {
 		Roles savedRole= new Roles();
 		savedRole.setRoleName(ConstantRole.fromString(user.getRole()));
 		savedUser.setRole(savedRole);
-		
+		System.out.println("Hello");
 		
 	        return appRepo.save(savedUser);
 	}
@@ -78,10 +78,6 @@ public class AppService {
 		// TODO Auto-generated method stub
 		return appRepo.findAllByNumber(phoneNumber);
 	}
-<<<<<<< HEAD
-=======
 
-System.out.println("demo");
->>>>>>> 2c8ce3634385d7603578e23599a26fd8ba8e2060
 
 }
